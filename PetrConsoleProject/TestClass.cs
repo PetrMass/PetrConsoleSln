@@ -10,6 +10,7 @@ namespace PetrConsoleProject
         
     {
         public string a;
+        public string b;
         public void My()
         {
         }
