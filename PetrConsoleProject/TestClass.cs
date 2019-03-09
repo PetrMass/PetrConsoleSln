@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PetrConsoleProject
 {
-    class TestClass
+    public class TestClass
     {
     }
 }
