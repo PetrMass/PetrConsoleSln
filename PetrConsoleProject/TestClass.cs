@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 namespace PetrConsoleProject
 {
     public class TestClass
-    { public void My()
+        
+    {
+        public string a;
+        public void My()
         {
         }
     }
-
 }
+
+
