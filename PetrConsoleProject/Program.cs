@@ -8,8 +8,24 @@ namespace PetrConsoleProject
 {
     class Program
     {
-        static void Main(string[] args)
+
+        static void Main()
         {
+
+
+            do
+            {
+                Console.WriteLine("Введите требуемое действие:\nСоздать книгу\nУдалить книгу\nПоказать весь список книг");
+
+                if (Console.ReadLine() == "Создать книгу")
+                {
+
+
+
+                }
+            }
+            while (true);
+
         }
     }
 }
