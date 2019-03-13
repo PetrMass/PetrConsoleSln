@@ -8,11 +8,9 @@ namespace PetrConsoleProject
 {
     class Create_Book
     {
-        
+        public Book[] Massiv_of_books = new Book[2]; // Почему не могу переместить в другой класс
         public void Create()
-        {
-            Book[] Massiv_of_books = new Book[2];
-
+        {           
             Console.WriteLine("");
             string Name = Console.ReadLine();
             Console.WriteLine("");

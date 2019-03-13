@@ -8,7 +8,7 @@ namespace PetrConsoleProject
 {
     class Program
     {
-
+        
         static void Main()
         {
 
@@ -20,8 +20,7 @@ namespace PetrConsoleProject
                 if (Console.ReadLine() == "Создать книгу")
                 {
 
-
-
+                    // Create_Book.Create(); ?????????????????
                 }
             }
             while (true);
