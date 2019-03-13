@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PetrConsoleProject
 {
-    class Date
+    public class Date
     {
         string date;
 

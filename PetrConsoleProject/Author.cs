@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PetrConsoleProject
 {
-    class Author
+    public class Author
     {
        readonly string author;
 

@@ -8,15 +8,15 @@ namespace PetrConsoleProject
 {
     public class Book
     {
-        readonly Name name;
-        readonly Author author;
-        readonly Date date;
+        public  string Name;
+        public  Author Author;
+        public  Date Date;
 
         public Book(string name, string author, string date)
         {
-            this.name = new Name(name);
-            this.author = new Author(author);
-            this.date = new Date(date);
+            this.Name = name;
+            this.Author = new Author(author);
+            this.Date = new Date(date);
         }
 
 

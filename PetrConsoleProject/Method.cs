@@ -8,7 +8,8 @@ namespace PetrConsoleProject
 {
     class Method
     {
-        public Book[] Massiv_of_books = new Book[2]; // Почему не могу переместить в другой класс
+        public Book[] Massiv_of_books = new Book[2];
+
         public void Create()
         {
             Console.WriteLine("");
@@ -22,10 +23,10 @@ namespace PetrConsoleProject
 
             for (int i = 0; i <= Massiv_of_books.Length; i++)
             {
-                if (i < Massiv_of_books.Length && Massiv_of_books[i]. == null) // как прочитать поле имени
+                if (i < Massiv_of_books.Length && Massiv_of_books[i].Name == null) // как прочитать поле имени
                 {
-                    Massiv_of_books[i] = book;
                     Console.WriteLine("Книга создана");
+                    Massiv_of_books[i] = book;                    
                 }
                 else
                 {
@@ -40,10 +41,10 @@ namespace PetrConsoleProject
         {
             Console.WriteLine("Введите название удаляемой книги:");
             string DelBook = Console.ReadLine();
-
+            
             for (int i = 0; i < Massiv_of_books.Length; i++)
             {
-                if (Massiv_of_books[i] != null && Massiv_of_books[i]. == DelBook) //
+                if (Massiv_of_books[i] != null && Massiv_of_books[i].Name == delName) //
                 {
                     Massiv_of_books[i] = null;
                     Console.WriteLine("Книга удалена");
@@ -55,6 +56,7 @@ namespace PetrConsoleProject
                         Console.WriteLine("Книга не найдена");
                 }
             } 
+            
 
         }
         public void Show()
@@ -63,9 +65,9 @@ namespace PetrConsoleProject
             {
                 if (Massiv_of_books[i] != null)
                 {
-                    Name.Show()
-                    Author.Show()
-                    Date.Show()
+                    Massiv_of_books[i].Name.Show();
+                    Massiv_of_books[i].Author.Show();
+                    Massiv_of_books[i].Date.Show();
                 }
             }
         }

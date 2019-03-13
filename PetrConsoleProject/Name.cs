@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace PetrConsoleProject
 {
-    class Name
+    public class Name
     {
-        string name;
+        public string name;
+
 
         public Name(string name)
         {
@@ -18,6 +19,17 @@ namespace PetrConsoleProject
         public void Show()
         {
             Console.WriteLine("Название: " + name);
+        }
+              
+
+        public override bool Equals(object obj)
+        {            
+            if (obj is Name)
+            {
+                Name compBooook = (Name)obj;
+                return this.name.Equals(compBooook.name);
+            }
+            return false;           
         }
     }
 }

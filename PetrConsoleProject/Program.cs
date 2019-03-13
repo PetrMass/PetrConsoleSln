@@ -9,16 +9,19 @@ namespace PetrConsoleProject
     class Program
     {
         
+        
+
         static void Main()
         {
+            Method me = new Method();
 
             do
             {
                 Console.WriteLine("Введите требуемое действие:\nСоздать книгу\nУдалить книгу\nПоказать весь список книг");
 
                 if (Console.ReadLine() == "Создать книгу")
-                {
-                    Method.Create(); // ?????????????????
+                {                   
+                    me.Create();
                 }
 
                 if (Console.ReadLine() == "Удалить книгу")
