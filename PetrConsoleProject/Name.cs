@@ -8,7 +8,7 @@ namespace PetrConsoleProject
 {
     class Name
     {
-       readonly string name;
+        string name;
 
         public Name(string name)
         {
