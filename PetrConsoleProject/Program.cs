@@ -12,16 +12,27 @@ namespace PetrConsoleProject
         static void Main()
         {
 
-
             do
             {
                 Console.WriteLine("Введите требуемое действие:\nСоздать книгу\nУдалить книгу\nПоказать весь список книг");
 
                 if (Console.ReadLine() == "Создать книгу")
                 {
-
                     // Create_Book.Create(); ?????????????????
                 }
+
+                if (Console.ReadLine() == "Удалить книгу")
+                {
+                    
+                }
+
+                if (Console.ReadLine() == "Удалить книгу")
+                {
+
+                }
+
+
+
             }
             while (true);
 
