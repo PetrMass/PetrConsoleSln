@@ -72,7 +72,7 @@ namespace PetrConsoleProject
                 {
                     Console.WriteLine("Название: {0}\nАвтор: {1}\nДата создания: {2}",
                     Massiv_of_books[i].Name, Massiv_of_books[i].Author, Massiv_of_books[i].Data);
-                    Console.WriteLine("-",30);
+                    Console.WriteLine("-");
                 }
             }
         }
