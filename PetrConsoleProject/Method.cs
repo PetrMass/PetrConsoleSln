@@ -12,21 +12,23 @@ namespace PetrConsoleProject
 
         public void Create()
         {
-            Console.WriteLine("");
-            string Name = Console.ReadLine();
-            Console.WriteLine("");
-            string Author = Console.ReadLine();
-            Console.WriteLine("");
-            string Date = Console.ReadLine();
-
-            Book book = new Book(Name, Author, Date);
+                        
 
             for (int i = 0; i <= Massiv_of_books.Length; i++)
             {
-                if (i < Massiv_of_books.Length && Massiv_of_books[i].Name == null) // как прочитать поле имени
+                Book book = new Book();
+
+                Console.WriteLine("Введите название");
+                book.Name = Console.ReadLine();
+                Console.WriteLine("Введите автора");
+                book.Author = Console.ReadLine();
+                Console.WriteLine("введите дату");
+                book.Data = Console.ReadLine();
+
+                if (i < Massiv_of_books.Length && Massiv_of_books[i].Name == null)
                 {
+                    Massiv_of_books[i] = book;
                     Console.WriteLine("Книга создана");
-                    Massiv_of_books[i] = book;                    
                 }
                 else
                 {
@@ -34,13 +36,11 @@ namespace PetrConsoleProject
                 }
             }
 
-
-
         }
         public void Delete()
         {
             Console.WriteLine("Введите название удаляемой книги:");
-            string DelBook = Console.ReadLine();
+            string delName = Console.ReadLine();
             
             for (int i = 0; i < Massiv_of_books.Length; i++)
             {
@@ -65,9 +65,9 @@ namespace PetrConsoleProject
             {
                 if (Massiv_of_books[i] != null)
                 {
-                    Massiv_of_books[i].Name.Show();
-                    Massiv_of_books[i].Author.Show();
-                    Massiv_of_books[i].Date.Show();
+                    Console.WriteLine("Название: {0}\nАвтор: {1}\nДата создания: {2}",
+                    Massiv_of_books[i].Name, Massiv_of_books[i].Author, Massiv_of_books[i].Data);
+                    Console.WriteLine("-",30);
                 }
             }
         }

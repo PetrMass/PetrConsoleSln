@@ -8,16 +8,12 @@ namespace PetrConsoleProject
 {
     public class Book
     {
-        public  string Name;
-        public  Author Author;
-        public  Date Date;
-
-        public Book(string name, string author, string date)
-        {
-            this.Name = name;
-            this.Author = new Author(author);
-            this.Date = new Date(date);
-        }
+        string name;
+        string data;
+        string author;
+        public string Name { set { name = value; } get { return name; } }
+        public string Data { set { data = value; } get { return data; } }
+        public string Author { set { author = value; } get { return author; } }
 
 
     }

@@ -8,12 +8,9 @@ namespace PetrConsoleProject
 {
     class Program
     {
-        
-        
-
         static void Main()
         {
-            Method me = new Method();
+             Method me = new Method();
 
             do
             {
@@ -26,19 +23,15 @@ namespace PetrConsoleProject
 
                 if (Console.ReadLine() == "Удалить книгу")
                 {
-                    
+                    me.Delete();
                 }
 
                 if (Console.ReadLine() == "Удалить книгу")
                 {
-
+                    me.Show();
                 }
-
-
-
             }
             while (true);
-
         }
     }
 }
