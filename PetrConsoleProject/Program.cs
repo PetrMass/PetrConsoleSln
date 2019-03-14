@@ -14,19 +14,22 @@ namespace PetrConsoleProject
 
             do
             {
-                Console.WriteLine("Введите требуемое действие:\nСоздать книгу\nУдалить книгу\nПоказать весь список книг");
+                Console.WriteLine("Введите требуемое действие:\n1-Создать книгу\n" +
+                    "2-Удалить книгу\n3-Показать весь список книг");
 
-                if (Console.ReadLine() == "Создать книгу")
+                string Choice = Console.ReadLine();
+
+                if (Choice == "1")
                 {                   
                     me.Create();
                 }
 
-                if (Console.ReadLine() == "Удалить книгу")
+                if (Choice == "2")
                 {
                     me.Delete();
                 }
 
-                if (Console.ReadLine() == "Удалить книгу")
+                if (Choice == "3")
                 {
                     me.Show();
                 }

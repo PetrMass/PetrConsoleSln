@@ -9,13 +9,10 @@ namespace PetrConsoleProject
     class Method
     {
         public Book[] Massiv_of_books = new Book[2];
-
+        
         public void Create()
         {
-                        
-
-            for (int i = 0; i <= Massiv_of_books.Length; i++)
-            {
+           
                 Book book = new Book();
 
                 Console.WriteLine("Введите название");
@@ -25,15 +22,22 @@ namespace PetrConsoleProject
                 Console.WriteLine("введите дату");
                 book.Data = Console.ReadLine();
 
-                if (i < Massiv_of_books.Length && Massiv_of_books[i].Name == null)
+            for (int i = 0; i < Massiv_of_books.Length; i++)
+            {
+                if (i < Massiv_of_books.Length && Massiv_of_books[i] == null) 
                 {
                     Massiv_of_books[i] = book;
                     Console.WriteLine("Книга создана");
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Каталог книг переполнен\nУдалите книгу из каталога для внесения новой книги");
+                    if (i == Massiv_of_books.Length-1)
+                    {
+                        Console.WriteLine("Каталог книг переполнен\nУдалите книгу из каталога для внесения новой книги");
+                    }                   
                 }
+                
             }
 
         }
@@ -44,11 +48,12 @@ namespace PetrConsoleProject
             
             for (int i = 0; i < Massiv_of_books.Length; i++)
             {
-                if (Massiv_of_books[i] != null && Massiv_of_books[i].Name == delName) //
+                if (Massiv_of_books[i] != null && Massiv_of_books[i].Name == delName) 
                 {
                     Massiv_of_books[i] = null;
                     Console.WriteLine("Книга удалена");
-                    Console.WriteLine("-------------------");                   
+                    Console.WriteLine("-------------------");
+                    break;
                 }
                 else
                 {
