@@ -10,7 +10,7 @@ namespace PetrConsoleProject
     {
         static void Main()
         {
-             Method me = new Method();
+             Library_Func me = new Library_Func();
 
             do
             {
@@ -20,7 +20,7 @@ namespace PetrConsoleProject
                 string Choice = Console.ReadLine();
 
                 if (Choice == "1")
-                {                   
+                {                    
                     me.Create();
                 }
 
