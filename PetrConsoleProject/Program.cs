@@ -10,7 +10,7 @@ namespace PetrConsoleProject
     {
         static void Main()
         {
-             Library_Func me = new Library_Func();
+             LibraryFunc libF = new LibraryFunc();
 
             do
             {
@@ -21,17 +21,17 @@ namespace PetrConsoleProject
 
                 if (Choice == "1")
                 {                    
-                    me.Create();
+                    libF.Create();
                 }
 
                 if (Choice == "2")
                 {
-                    me.Delete();
+                    libF.Delete();
                 }
 
                 if (Choice == "3")
                 {
-                    me.Show();
+                    libF.Show();
                 }
             }
             while (true);

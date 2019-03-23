@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace PetrConsoleProject
 {
-    class Library_Func
+    class LibraryFunc
     {
 
-        List<Book> Library = new List<Book>();
+        public static List<Book> Library = new List<Book>(); // непонятно, почему надо и паблик и статик
 
         public void Create()
         {
@@ -18,13 +18,16 @@ namespace PetrConsoleProject
 
             Console.WriteLine("Введите название");
             book.Name = Console.ReadLine();
-            Console.WriteLine("Введите автора");
+            Console.WriteLine("Введите автора");          
             book.Author = Console.ReadLine();
             Console.WriteLine("введите дату");
             book.Data = Console.ReadLine();
 
             Library.Add(book);
+            
+            File.WriteFile();
 
+            Console.WriteLine("Книга добавлена");
         }
         public void Delete() // можно сделать проще, без цикла, если возвращать индекс элемента, поле которого равно delName. Не сооброжу как.
                              // Список объектов List поддерживает поиск, но ищет он по типу Book, а надо по типу string (book.Name)
@@ -39,6 +42,7 @@ namespace PetrConsoleProject
                 {
                     Library.RemoveAt(i);
                     Console.WriteLine("Книга удалена");
+                    File.WriteFile();
                     break;
                 }
                 else
