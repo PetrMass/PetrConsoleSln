@@ -14,12 +14,6 @@ namespace PetrConsoleProject
         {
             string writePath = @"C:\Library.txt";
 
-
-
-
-
-
-
             using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default)) // не ясно, почему не работает без юсинг
             {
                 for (int i = 0; i < LibraryFunc.Library.Count; i++)
