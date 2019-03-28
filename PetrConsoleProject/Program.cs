@@ -11,13 +11,15 @@ namespace PetrConsoleProject
         static void Main()
         {
              LibraryFunc libF = new LibraryFunc();
-
+            
             do
             {
                 Console.WriteLine("Введите требуемое действие:\n1-Создать книгу\n" +
-                    "2-Удалить книгу\n3-Показать весь список книг");
+                    "2-Удалить книгу\n3-Показать весь список книг\n4-Прочитать из XML");
+                Console.WriteLine();
 
                 string Choice = Console.ReadLine();
+                Console.WriteLine();
 
                 if (Choice == "1")
                 {                    
@@ -32,6 +34,11 @@ namespace PetrConsoleProject
                 if (Choice == "3")
                 {
                     libF.Show();
+                }
+
+                if (Choice == "4")
+                {
+                    XML.XmlRead();
                 }
             }
             while (true);

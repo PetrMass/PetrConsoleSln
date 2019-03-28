@@ -11,7 +11,7 @@ namespace PetrConsoleProject
     {
 
         public static List<Book> Library = new List<Book>(); // непонятно, почему надо и паблик и статик
-
+       
         public void Create()
         {
             Book book = new Book();
@@ -29,6 +29,7 @@ namespace PetrConsoleProject
             XML.XmlCreate();
 
             Console.WriteLine("Книга добавлена");
+            Console.WriteLine();
         }
         public void Delete() // можно сделать проще, без цикла, если возвращать индекс элемента, поле которого равно delName. Не сооброжу как.
                              // Список объектов List поддерживает поиск, но ищет он по типу Book, а надо по типу string (book.Name)
@@ -37,24 +38,35 @@ namespace PetrConsoleProject
 
             string delName = Console.ReadLine();
 
-            for (int i = 0; i < Library.Count; i++)
+            if (Library.Count != 0)
             {
-                if (Library[i].Name == delName)
+                for (int i = 0; i < Library.Count; i++)
                 {
-                    Library.RemoveAt(i);
-                    Console.WriteLine("Книга удалена");
-                    File.WriteFile();
-                    break;
-                }
-                else
-                {
-                    if (i == Library.Count - 1)
+
+                    if (Library[i].Name == delName)
                     {
-                        Console.WriteLine("Книга не найдена");
+                        Library.RemoveAt(i);
+                        Console.WriteLine("Книга удалена");
+                        Console.WriteLine();
+                        File.WriteFile();
+                        XML.XmlCreate();
+                        break;
+                    }
+                    else
+                    {
+                        if (i == Library.Count - 1)
+                        {
+                            Console.WriteLine("Книга не найдена");
+                            Console.WriteLine();
+                        }
                     }
                 }
             }
-
+            else
+            {
+                Console.WriteLine("Список книг пуст, удалять нечего");
+                Console.WriteLine();
+            }
 
         }
         public void Show()
@@ -63,6 +75,7 @@ namespace PetrConsoleProject
             {
                 Console.WriteLine("Название: {0}\nАвтор: {1}\nДата: {2}",
                 Library[i].Name, Library[i].Author, Library[i].Data);
+                Console.WriteLine();
             }
         }
     }
