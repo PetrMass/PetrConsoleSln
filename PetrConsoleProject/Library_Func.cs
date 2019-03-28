@@ -26,6 +26,7 @@ namespace PetrConsoleProject
             Library.Add(book);
             
             File.WriteFile();
+            XML.XmlCreate();
 
             Console.WriteLine("Книга добавлена");
         }
