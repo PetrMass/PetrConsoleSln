@@ -8,6 +8,7 @@ namespace PetrConsoleProject
 {
     class Method
     {
+        int primer;
         public Book[] Massiv_of_books = new Book[2];
 
         public void Create()
