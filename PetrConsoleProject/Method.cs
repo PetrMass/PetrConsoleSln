@@ -10,6 +10,7 @@ namespace PetrConsoleProject
     {
         int primer;
         int primer2;
+        int testing2;
 
         public Book[] Massiv_of_books = new Book[2];
 
