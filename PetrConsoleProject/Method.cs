@@ -12,7 +12,7 @@ namespace PetrConsoleProject
         int primer2;
 
         public Book[] Massiv_of_books = new Book[2];
-
+        int master;
         public void Create()
         {
                         
